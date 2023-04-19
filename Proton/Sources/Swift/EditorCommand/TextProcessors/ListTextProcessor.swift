@@ -259,7 +259,7 @@ public class ListTextProcessor: TextProcessing {
         editor.selectedRange = editedRange.nextPosition
     }
 
-    func updatedParagraphStyle(paraStyle: NSParagraphStyle?, listLineFormatting: LineFormatting, indentMode: Indentation) -> NSParagraphStyle? {
+    public func updatedParagraphStyle(paraStyle: NSParagraphStyle?, listLineFormatting: LineFormatting, indentMode: Indentation) -> NSParagraphStyle? {
         let mutableStyle = paraStyle?.mutableCopy() as? NSMutableParagraphStyle
         let indent = listLineFormatting.indentation
         if indentMode == .indent {
